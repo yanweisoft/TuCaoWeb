@@ -21,10 +21,6 @@ namespace TuCao.Model
             return scn;
         }
 
-        public static int GetData(int x, int y)
-        {
-            int result = x + y;
-            return result;
-        }
+        
     }
 }
