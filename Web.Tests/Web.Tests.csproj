@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6962FCAA-E15A-4E7B-9235-EF2EE4F214F5}</ProjectGuid>
+    <ProjectGuid>{5494245E-1FCA-4A4B-9EAC-C45E50F3331B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Web.Tests</RootNamespace>
@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Web\Web.csproj">
-      <Project>{ABB25E69-38A0-4141-83FB-D067E44F1F42}</Project>
+      <Project>{2A06E7F2-1482-4F41-925A-0F1603B79735}</Project>
       <Name>Web</Name>
     </ProjectReference>
   </ItemGroup>
