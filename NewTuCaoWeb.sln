@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuCao.DataAccess", "TuCao.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuCao.Utility", "TuCao.Utility\TuCao.Utility.csproj", "{E19B9D1F-2A70-4494-8F39-A203D0BD4AC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{ABB25E69-38A0-4141-83FB-D067E44F1F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Tests", "Web.Tests\Web.Tests.csproj", "{6962FCAA-E15A-4E7B-9235-EF2EE4F214F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{E19B9D1F-2A70-4494-8F39-A203D0BD4AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E19B9D1F-2A70-4494-8F39-A203D0BD4AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E19B9D1F-2A70-4494-8F39-A203D0BD4AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB25E69-38A0-4141-83FB-D067E44F1F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB25E69-38A0-4141-83FB-D067E44F1F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB25E69-38A0-4141-83FB-D067E44F1F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB25E69-38A0-4141-83FB-D067E44F1F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6962FCAA-E15A-4E7B-9235-EF2EE4F214F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6962FCAA-E15A-4E7B-9235-EF2EE4F214F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6962FCAA-E15A-4E7B-9235-EF2EE4F214F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6962FCAA-E15A-4E7B-9235-EF2EE4F214F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
