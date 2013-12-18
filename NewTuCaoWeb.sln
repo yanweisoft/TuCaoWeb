@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuCao.Model", "TuCao.Model\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuCao.BLL", "TuCao.BLL\TuCao.BLL.csproj", "{C14DDED4-9AA7-472E-9780-203CD4F9D153}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuCao.DAL", "TuCao.DAL\TuCao.DAL.csproj", "{2FD8DCCD-F23E-43F7-9F30-4BD2F2956035}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuCao.DataAccess", "TuCao.DataAccess\TuCao.DataAccess.csproj", "{431325DC-C324-45E8-B8CA-8A3A7EBD6FE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{C14DDED4-9AA7-472E-9780-203CD4F9D153}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C14DDED4-9AA7-472E-9780-203CD4F9D153}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C14DDED4-9AA7-472E-9780-203CD4F9D153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD8DCCD-F23E-43F7-9F30-4BD2F2956035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD8DCCD-F23E-43F7-9F30-4BD2F2956035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD8DCCD-F23E-43F7-9F30-4BD2F2956035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD8DCCD-F23E-43F7-9F30-4BD2F2956035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431325DC-C324-45E8-B8CA-8A3A7EBD6FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431325DC-C324-45E8-B8CA-8A3A7EBD6FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431325DC-C324-45E8-B8CA-8A3A7EBD6FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431325DC-C324-45E8-B8CA-8A3A7EBD6FE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
