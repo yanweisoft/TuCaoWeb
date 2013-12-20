@@ -10,20 +10,20 @@ namespace TuCao.DAL
 {
     public class ReplyInfoDAL
     {
-        private const string sql_insert = @" INSERT INTO [ReplyInfo]( [TopicId],[UserId],[NickName] ,[PostContent],[CreateTime] ,[Ip] ,[Status]) VALUES( 
+        private const string sql_insert = @" INSERT INTO [ReplyInfo]( [TopicId],[UserId],[NickName] ,[PostContent],[CreateTime] ,[IP] ,[Status]) VALUES( 
                                                @TopicId, @UserId,@NickName,@PostContent,@CreateTime,@Ip,@Status)";
-        private const string sql_update = @" UPDATE [ReplyInfo] SET  ,[TopicId] = @TopicId,[UserId] = @UserId ,[NickName] = @NickName ,[PostContent] = @PostContent,[CreateTime] = @CreateTime  ,[Ip] = @Ip ,[Status] = @Status WHERE [Id] = @Id ";
+        private const string sql_update = @" UPDATE [ReplyInfo] SET  ,[TopicId] = @TopicId,[UserId] = @UserId ,[NickName] = @NickName ,[PostContent] = @PostContent,[CreateTime] = @CreateTime  ,[IP] = @IP ,[Status] = @Status WHERE [Id] = @Id ";
 
         private const string sql_delete = @" DELETE FROM [ReplyInfo]   WHERE Id=@Id ";
 
-        private const string sql_select = @"SELECT [Id],[TopicId] ,[UserId] ,[NickName] ,[PostContent],[CreateTime],[Ip],[Status] FROM [ReplyInfo] WHERE Id=@Id ";
+        private const string sql_select = @"SELECT [Id],[TopicId] ,[UserId] ,[NickName] ,[PostContent],[CreateTime],[IP],[Status] FROM [ReplyInfo] WHERE Id=@Id ";
 
         private const string sql_select_pager = @"Declare @sql nvarchar(2000)
 Declare @startRecord int
 Declare @endRecord int
 Set @startRecord = (@page-1)*@pageSize + 1
 Set @endRecord = @startRecord + @pageSize - 1
-Set @sql = 'SELECT   [Id],[TopicId],[UserId],[NickName],[PostContent],[CreateTime],[Ip],[Status]  rowId FROM (SELECT  [Id],[TopicId],[UserId],[NickName],[PostContent],[CreateTime],[Ip],[Status] ,ROW_NUMBER() OVER(ORDER BY Id DESC) AS rowId FROM ReplyInfo WITH (NOLOCK) WHERE  1=1 and {0} ) AS Tab_TotalTable WHERE rowId BETWEEN ' + Convert(varchar(50),@startRecord) + ' AND ' +  Convert(varchar(50),@endRecord)
+Set @sql = 'SELECT   [Id],[TopicId],[UserId],[NickName],[PostContent],[CreateTime],[IP],[Status]  rowId FROM (SELECT  [Id],[TopicId],[UserId],[NickName],[PostContent],[CreateTime],[IP],[Status] ,ROW_NUMBER() OVER(ORDER BY Id DESC) AS rowId FROM ReplyInfo WITH (NOLOCK) WHERE  1=1 and {0} ) AS Tab_TotalTable WHERE rowId BETWEEN ' + Convert(varchar(50),@startRecord) + ' AND ' +  Convert(varchar(50),@endRecord)
 Exec(@Sql)";
 
 
@@ -59,7 +59,7 @@ Exec(@Sql)";
                 insertQuery.Parameters.Add("@NickName", model.NickName, SqlDbType.NVarChar, 50);
                 insertQuery.Parameters.Add("@PostContent", model.PostContent, SqlDbType.NVarChar, 500);
                 insertQuery.Parameters.Add("@CreateTime", model.CreateTime, SqlDbType.DateTime);
-                insertQuery.Parameters.Add("@Ip", model.IP, SqlDbType.NVarChar, 50);
+                insertQuery.Parameters.Add("@IP", model.IP, SqlDbType.NVarChar, 50);
                 insertQuery.Parameters.Add("@Status", model.Status, SqlDbType.Int);
                 isOk = SqlDataAccess.ExecuteNonQuery(insertQuery, DBSettings.TuCaoMainDb) > 0 ? true : false;
             }
