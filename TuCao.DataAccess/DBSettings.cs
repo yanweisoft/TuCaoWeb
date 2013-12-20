@@ -26,11 +26,7 @@ namespace TuCao.DataAccess
         /// 
         /// 配置节点：UserCenterReadDB.ConnectionString
         /// </summary>
-        public static DatabaseProperty UserCenterReadDb;
-
-
-
-
+      //public static DatabaseProperty UserCenterReadDb;
 
         /// <summary>
         /// 构造设置
