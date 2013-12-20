@@ -10,6 +10,7 @@ namespace TuCao.DAL
 {
     public class ReplyInfoDAL
     {
+        #region  SQL
         private const string sql_insert = @" INSERT INTO [ReplyInfo]( [TopicId],[UserId],[NickName] ,[PostContent],[CreateTime] ,[IP] ,[Status]) VALUES( 
                                                @TopicId, @UserId,@NickName,@PostContent,@CreateTime,@Ip,@Status)";
         private const string sql_update = @" UPDATE [ReplyInfo] SET  ,[TopicId] = @TopicId,[UserId] = @UserId ,[NickName] = @NickName ,[PostContent] = @PostContent,[CreateTime] = @CreateTime  ,[IP] = @IP ,[Status] = @Status WHERE [Id] = @Id ";
@@ -25,8 +26,7 @@ Set @startRecord = (@page-1)*@pageSize + 1
 Set @endRecord = @startRecord + @pageSize - 1
 Set @sql = 'SELECT   [Id],[TopicId],[UserId],[NickName],[PostContent],[CreateTime],[IP],[Status]  rowId FROM (SELECT  [Id],[TopicId],[UserId],[NickName],[PostContent],[CreateTime],[IP],[Status] ,ROW_NUMBER() OVER(ORDER BY Id DESC) AS rowId FROM ReplyInfo WITH (NOLOCK) WHERE  1=1 and {0} ) AS Tab_TotalTable WHERE rowId BETWEEN ' + Convert(varchar(50),@startRecord) + ' AND ' +  Convert(varchar(50),@endRecord)
 Exec(@Sql)";
-
-
+        #endregion 
         #region   SELECT
 
         private DataTable GetPagerData(int pageSize, int pageIndex, string strWhere)
@@ -104,9 +104,7 @@ Exec(@Sql)";
             return isOk;
 
         }
-        #endregion
-
-
+        #endregion 
         #region  DELETE
 
         public int Del(int Id)
@@ -118,13 +116,7 @@ Exec(@Sql)";
             return SqlDataAccess.ExecuteNonQuery(baseQuery, DBSettings.TuCaoMainDb);
         }
         #endregion
-
-
-
-
-
-
-
+         
 
     }
 }

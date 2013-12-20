@@ -33,7 +33,7 @@ namespace TuCao.Model
         /// <summary>
         /// 用户ID
         /// </summary>
-        public int Userid
+        public int UserId
         {
             get { return _userid; }
             set { _userid = value; }
@@ -41,7 +41,7 @@ namespace TuCao.Model
         /// <summary>
         /// 昵称
         /// </summary>
-        public string Nickname
+        public string NickName
         {
             get { return _nickname; }
             set { _nickname = value; }
@@ -57,7 +57,7 @@ namespace TuCao.Model
         /// <summary>
         /// 类别ID
         /// </summary>
-        public int Typeid
+        public int TypeId
         {
             get { return _typeid; }
             set { _typeid = value; }
@@ -65,7 +65,7 @@ namespace TuCao.Model
         /// <summary>
         /// 内容
         /// </summary>
-        public string Postcontent
+        public string PostContent
         {
             get { return _postcontent; }
             set { _postcontent = value; }
@@ -73,7 +73,7 @@ namespace TuCao.Model
         /// <summary>
         /// 标签
         /// </summary>
-        public string Posttags
+        public string PostTags
         {
             get { return _posttags; }
             set { _posttags = value; }
@@ -81,7 +81,7 @@ namespace TuCao.Model
         /// <summary>
         /// 是否邮件通知
         /// </summary>
-        public string Isemail
+        public string IsEmail
         {
             get { return _isemail; }
             set { _isemail = value; }
@@ -89,7 +89,7 @@ namespace TuCao.Model
         /// <summary>
         /// 创建时间
         /// </summary>
-        public DateTime Createtime
+        public DateTime CreateTime
         {
             get { return _createtime; }
             set { _createtime = value; }
@@ -97,8 +97,9 @@ namespace TuCao.Model
         /// <summary>
         /// IP
         /// </summary>
-        public string Ip
+        public string IP
         {
+
             get { return _ip; }
             set { _ip = value; }
         }
