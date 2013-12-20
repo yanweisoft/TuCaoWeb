@@ -44,6 +44,16 @@
     <Compile Include="TopicInfoDAL.cs" />
     <Compile Include="UserInfoDAL.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TuCao.DataAccess\TuCao.DataAccess.csproj">
+      <Project>{431325dc-c324-45e8-b8ca-8a3a7ebd6fe6}</Project>
+      <Name>TuCao.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TuCao.Model\TuCao.Model.csproj">
+      <Project>{eb1ce1d0-47df-44f1-9195-0ee848ef3f40}</Project>
+      <Name>TuCao.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
