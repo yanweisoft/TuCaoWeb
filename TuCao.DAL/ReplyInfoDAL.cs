@@ -38,8 +38,7 @@ Exec(@Sql)";
             baseQuery.Parameters.Add("@page", pageIndex, SqlDbType.Int);
             return SqlDataAccess.ExecuteDataset(baseQuery, DBSettings.TuCaoMainDb).Tables[0];
         }
-        #endregion
-
+        #endregion 
         #region  INSERT
 
         public bool Insert(ReplyInfoModel model)
@@ -68,8 +67,7 @@ Exec(@Sql)";
 
             return isOk;
         }
-        #endregion
-
+        #endregion 
         #region  UPDATE
         public bool Update(ReplyInfoModel model)
         {
@@ -115,8 +113,7 @@ Exec(@Sql)";
             baseQuery.Parameters.Add("@objid", Id, SqlDbType.Int);
             return SqlDataAccess.ExecuteNonQuery(baseQuery, DBSettings.TuCaoMainDb);
         }
-        #endregion
-         
+        #endregion 
 
     }
 }
