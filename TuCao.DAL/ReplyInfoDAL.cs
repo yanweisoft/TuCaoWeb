@@ -39,8 +39,7 @@ Exec(@Sql)";
             return SqlDataAccess.ExecuteDataset(baseQuery, DBSettings.TuCaoMainDb).Tables[0];
         }
         #endregion 
-        #region  INSERT
-
+        #region  INSERT 
         public bool Insert(ReplyInfoModel model)
         {
             bool isOk = false;
