@@ -85,6 +85,20 @@
     <Folder Include="Images\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TuCao.BLL\TuCao.BLL.csproj">
+      <Project>{c14dded4-9aa7-472e-9780-203cd4f9d153}</Project>
+      <Name>TuCao.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TuCao.Model\TuCao.Model.csproj">
+      <Project>{eb1ce1d0-47df-44f1-9195-0ee848ef3f40}</Project>
+      <Name>TuCao.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TuCao.Utility\TuCao.Utility.csproj">
+      <Project>{e19b9d1f-2a70-4494-8f39-a203d0bd4ac0}</Project>
+      <Name>TuCao.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
