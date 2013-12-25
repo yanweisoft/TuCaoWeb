@@ -61,7 +61,7 @@
     <Content Include="model\Index.html" />
     <Content Include="model\login.html" />
     <Content Include="model\reg.html" />
-    <Content Include="sql\sql.txt" />
+    <Content Include="Sql\sql.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -80,8 +80,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
-    <Folder Include="images\" />
+    <Folder Include="Css\" />
+    <Folder Include="Images\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
