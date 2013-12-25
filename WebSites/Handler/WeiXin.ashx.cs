@@ -7,6 +7,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Xml;
+using TuCao.Model;
 namespace WebSites.Handler
 {
     /// <summary>
@@ -34,11 +35,11 @@ namespace WebSites.Handler
                 postStr = Encoding.UTF8.GetString(b);
                 if (!string.IsNullOrEmpty(postStr))
                 {
-                    responseMsg(postStr);
+                    Handle(postStr);
                 }
             }
 
-            //context.Response.Write("Hello World");
+          
         }
 
 
@@ -83,19 +84,91 @@ namespace WebSites.Handler
             }
         }
 
-        public void responseMsg(string postStr)
+        public void Handle(string postStr)
         {
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(postStr);
             WriteLog("responseMsg:--------------" + postStr);
             XmlElement rootElement = doc.DocumentElement;
 
-            XmlNode MsgType = rootElement.SelectSingleNode("doc");
+            XmlNode MsgType = rootElement.SelectSingleNode("MsgType");
 
+            RequestXML requestXml = new RequestXML();
+            requestXml.ToUserName = rootElement.SelectSingleNode("ToUserName").InnerText;
+            requestXml.FromUserName = rootElement.SelectSingleNode("FromUserName").InnerText;
+            requestXml.CreateTime = rootElement.SelectSingleNode("CreateTime").InnerText;
+            requestXml.MsgType = MsgType.InnerText;
 
+            switch (requestXml.MsgType)
+            {
 
+                case "text"://文本消息
+                    requestXml.Content = rootElement.SelectSingleNode("Content").InnerText;
+                    break;
+                case "image":
+                    requestXml.PicUrl = rootElement.SelectSingleNode("PicUrl").InnerText;
+                    break;
+                case "location":
+                    requestXml.Location_X = rootElement.SelectSingleNode("Location_X").InnerText;
+                    requestXml.Location_Y = rootElement.SelectSingleNode("Location_Y").InnerText;
+                    requestXml.Scale = rootElement.SelectSingleNode("Scale").InnerText;
+                    requestXml.Label = rootElement.SelectSingleNode("Label").InnerText;
+                    break;
+                case "link":
+                    break;
+                case "event":
+                    break;
+                default:
+                    break;
+            }
+
+            responseMsg(requestXml);
 
         }
+
+
+
+        private void responseMsg(RequestXML requestXML)
+        {
+            try
+            {
+                string resxml = "";
+                //主要根据数据库尽兴关键字匹配自动回复内容，可以根据自己的业务情况编写
+                //1。通常有，没有匹配到任何指令就返回帮助信息
+                //---------------------------------------
+                ///
+
+                string _reMg = "";
+                switch (requestXML.MsgType)
+                {
+                    case "text":
+                        _reMg = "这是一个文本";
+                        resxml = "<xml><ToUserName><![CDATA[" + requestXML.FromUserName + "]]></ToUserName><FromUserName><![CDATA[" + requestXML.ToUserName + "]]></FromUserName><CreateTime>" + ConvertDateTimeInt(DateTime.Now) + "</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[" + _reMg + "]]></Content><FuncFlag>1</FuncFlag></xml>";
+                        break;
+                    case "location":
+                        _reMg = "这是一个地址";
+                        resxml = "<xml><ToUserName><![CDATA[" + requestXML.FromUserName + "]]></ToUserName><FromUserName><![CDATA[" + requestXML.ToUserName + "]]></FromUserName><CreateTime>" + ConvertDateTimeInt(DateTime.Now) + "</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[" + _reMg + "]]></Content><FuncFlag>1</FuncFlag></xml>";
+
+                        break;
+                    case "image":
+                        _reMg = "这是一个图片";
+                        resxml = "<xml><ToUserName><![CDATA[" + requestXML.FromUserName + "]]></ToUserName><FromUserName><![CDATA[" + requestXML.ToUserName + "]]></FromUserName><CreateTime>" + ConvertDateTimeInt(DateTime.Now) + "</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[" + _reMg + "]]></Content><FuncFlag>1</FuncFlag></xml>";
+
+                        break;
+                    default:
+                        break;
+                }
+                context.Response.Write(resxml);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+
 
 
         private int ConvertDateTimeInt(DateTime time)
