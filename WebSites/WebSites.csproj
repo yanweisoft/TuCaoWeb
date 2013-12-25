@@ -57,10 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="model\detail.html" />
-    <Content Include="model\Index.html" />
-    <Content Include="model\login.html" />
-    <Content Include="model\reg.html" />
+    <Content Include="Model\detail.html" />
+    <Content Include="Model\Index.html" />
+    <Content Include="Model\login.html" />
+    <Content Include="Model\reg.html" />
     <Content Include="Sql\sql.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Css\" />
+    <Folder Include="Doc\" />
     <Folder Include="Images\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
