@@ -1,0 +1,63 @@
+﻿USE [TuCao]
+GO
+/****** Object:  Table [dbo].[UserInfo]    Script Date: 12/19/2013 11:01:33 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UserInfo](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[UserEmail] [nvarchar](100) NULL,
+	[NickName] [nvarchar](50) NULL,
+	[CreateTime] [datetime] NULL,
+	[LastLoginTime] [datetime] NULL,
+	[Ip] [nvarchar](50) NULL,
+	[LoginCount] [int] NULL,
+ CONSTRAINT [PK_UserInfo] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[TopicInfo]    Script Date: 12/19/2013 11:01:33 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TopicInfo](
+	[Id] [int] NULL,
+	[UserId] [int] NULL,
+	[NickName] [nvarchar](50) NULL,
+	[Sex] [int] NULL,
+	[TypeId] [int] NULL,
+	[PostContent] [nvarchar](256) NULL,
+	[PostTags] [nvarchar](50) NULL,
+	[IsEmail] [int] NULL,
+	[CreateTime] [datetime] NULL,
+	[Ip] [nvarchar](50) NULL,
+	[Status] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ReplyInfo]    Script Date: 12/19/2013 11:01:33 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ReplyInfo](
+	[Id] [int] NOT NULL,
+	[TopicId] [int] NULL,
+	[UserId] [int] NULL,
+	[NickName] [nvarchar](50) NULL,
+	[PostContent] [nvarchar](256) NULL,
+	[CreateTime] [datetime] NULL,
+	[Ip] [nvarchar](50) NULL,
+	[Status] [int] NULL,
+ CONSTRAINT [PK_ReplyInfo] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Default [DF_UserInfo_CreateTime]    Script Date: 12/19/2013 11:01:33 ******/
+ALTER TABLE [dbo].[UserInfo] ADD  CONSTRAINT [DF_UserInfo_CreateTime]  DEFAULT (getdate()) FOR [CreateTime]
+GO
