@@ -25,8 +25,7 @@ namespace WebSites.Handler
             context.Response.ContentType = "text/plain";
             #region 验证
             valid();
-            #endregion
-
+            #endregion 
             if (context.Request.HttpMethod.ToLower() == "post")
             {
                 Stream s = context.Request.InputStream;
@@ -37,13 +36,8 @@ namespace WebSites.Handler
                 {
                     Handle(postStr);
                 }
-            }
-
-          
-        }
-
-
-
+            } 
+        } 
 
         /// <summary>
         /// 验证是否成为开发者
@@ -55,8 +49,7 @@ namespace WebSites.Handler
             {
                 context.Response.Write(echostr);
                 context.Response.End();//推送...不然微信平台无法验证token
-            }
-
+            } 
         }
 
         /// <summary>
