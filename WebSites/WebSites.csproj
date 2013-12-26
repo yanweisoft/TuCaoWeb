@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="detail.html" />
     <Content Include="Index.html" />
     <Content Include="Model\detail.html" />
     <Content Include="Model\Index.html" />
