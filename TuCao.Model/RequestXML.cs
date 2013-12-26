@@ -7,7 +7,7 @@ namespace TuCao.Model
 {
 
 
-    #region 微信请求类
+    #region 微信请求类 2013年12月26日21:40:22
     public class RequestXML
     {
 
