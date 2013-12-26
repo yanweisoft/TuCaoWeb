@@ -37,8 +37,7 @@ namespace WebSites.Handler
                     Handle(postStr);
                 }
             } 
-        } 
-
+        }  
         /// <summary>
         /// 验证是否成为开发者
         /// </summary>
