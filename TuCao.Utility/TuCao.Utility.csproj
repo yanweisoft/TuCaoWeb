@@ -42,8 +42,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigFileHelper.cs" />
     <Compile Include="DataHelper.cs" />
+    <Compile Include="EmailHelper.cs" />
+    <Compile Include="EncryptHelper.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FileStateHelper.cs" />
+    <Compile Include="HttpHelper.cs" />
+    <Compile Include="JsonLib.cs" />
+    <Compile Include="PageHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestMethod.cs" />
+    <Compile Include="RequestQueryString.cs" />
+    <Compile Include="SimleHelper.cs" />
+    <Compile Include="StringExtensions.cs.cs" />
+    <Compile Include="StringHelper.cs" />
+    <Compile Include="TimeHelper.cs" />
+    <Compile Include="Txt.cs" />
+    <Compile Include="WebRequest.cs" />
+    <Compile Include="XmlLib.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
