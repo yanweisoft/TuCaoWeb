@@ -11,7 +11,7 @@ namespace TuCao.Utility
     public class EmailHelper
     {
         /// <summary>
-        /// 发邮件：基于system.net.mail
+        /// 发邮件：基于system.net.mail  
         /// </summary>
         /// <param name="strFrom">发送人邮箱</param>
         /// <param name="fromPwd">发送人邮箱密码</param>
