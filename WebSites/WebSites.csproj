@@ -59,6 +59,14 @@
   <ItemGroup>
     <Content Include="detail.html" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\5.jpg" />
+    <Content Include="Images\6.jpg" />
+    <Content Include="Images\7.jpg" />
+    <Content Include="Images\8.jpg" />
     <Content Include="Index.html" />
     <Content Include="Model\detail.html" />
     <Content Include="Model\Index.html" />
@@ -85,7 +93,6 @@
   <ItemGroup>
     <Folder Include="Css\" />
     <Folder Include="Doc\" />
-    <Folder Include="Images\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
